@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
+import { FormsModule } from '@angular/forms';
 import { BrnSelectImports } from '@spartan-ng/brain/select';
 import { HlmSelectImports } from '@spartan-ng/helm/select';
-import { FormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-header',
-  imports: [FormsModule, HlmSelectImports, BrnSelectImports],
+  imports: [FormsModule, BrnSelectImports, HlmSelectImports],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })

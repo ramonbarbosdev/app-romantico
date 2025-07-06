@@ -6,7 +6,7 @@ import { Header } from "../../components/header/header";
 
 @Component({
   selector: 'app-home',
-  imports: [Galeria, Contador, Apresentacao, Header],
+  imports: [ Contador, Apresentacao, Header],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })

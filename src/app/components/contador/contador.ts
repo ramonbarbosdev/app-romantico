@@ -16,7 +16,7 @@ export class Contador implements OnInit, OnDestroy {
   private intervalo: any;
 
   // 🩷 Data de início do relacionamento
-  private dataInicio = new Date('2024-10-01T00:00:00');
+  private dataInicio = new Date('2025-01-30T20:30:00');
 
   ngOnInit(): void {
     this.atualizarContador();
