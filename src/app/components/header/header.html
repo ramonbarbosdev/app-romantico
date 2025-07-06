@@ -1,10 +1,24 @@
-<brn-select (valueChange)="trocarIdioma($event)">
-  <hlm-select-trigger>
-    <hlm-select-value />
+
+
+<!-- Spartan UI Select (usado para outra funcionalidade, ex: menu de opções) -->
+
+<brn-select
+[value]="idiomaSelecionado!"
+(valueChange)="trocarIdioma(typeof $event === 'string' ? $event : ($event?.[0] || ''))"
+>
+
+  <hlm-select-trigger
+    class="flex items-center justify-between w-40  bg-white/10 backdrop-blur-sm border border-white/30 text-white rounded-lg shadow-md"
+  >
+    <hlm-select-value class="!text-white" />
   </hlm-select-trigger>
-  <hlm-select-content class="w-56">
-    <hlm-option value="pt">Português</hlm-option>
-    <hlm-option value="en">English</hlm-option>
-    <hlm-option value="es">Espanhol</hlm-option>
+
+  <hlm-select-content
+    class="w-40 bg-white/10 backdrop-blur-sm text-white border border-white/30 rounded-lg shadow-lg mt-1"
+  >
+    <!-- <hlm-option disabled selected value="">Selecione</hlm-option> -->
+    <hlm-option value="pt">🇧🇷 Português</hlm-option>
+    <hlm-option value="en">🇺🇸 English</hlm-option>
+    <hlm-option value="es">🇪🇸 Español</hlm-option>
   </hlm-select-content>
 </brn-select>

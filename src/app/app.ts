@@ -11,8 +11,5 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class App {
   protected title = 'app-romantico';
 
-  // constructor(private translate: TranslateService) {
-  //   translate.setDefaultLang('pt');
-  //   translate.use('pt');
-  // }
+
 }
