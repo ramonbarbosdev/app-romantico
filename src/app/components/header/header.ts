@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 import { BrnSelectImports } from '@spartan-ng/brain/select';
 import { HlmSelectImports } from '@spartan-ng/helm/select';
@@ -9,4 +10,10 @@ import { HlmSelectImports } from '@spartan-ng/helm/select';
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
-export class Header {}
+export class Header {
+  constructor(private translate: TranslateService) {}
+
+  trocarIdioma(idioma: string) {
+    this.translate.use(idioma);
+  }
+}

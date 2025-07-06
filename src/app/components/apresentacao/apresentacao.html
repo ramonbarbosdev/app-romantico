@@ -6,13 +6,13 @@
       [ngStyle]="{ transform: 'translateY(' + translateY + 'vh)' }"
     >
       <h1 class="  mb-5 mt-6 md:mb-10 md:mt-5  text-xl md:text-5xl font-primary text-pink-400">
-        Olá, meu bem!
+        {{ 'ap-titulo' | translate }}
       </h1>
       <h2 class="mb-3 text-sm md:text-2xl font-secundary text-gray-600">
-        No dia 30 de janeiro de 2025, em Salvador, Bahia.
+        {{ 'ap-texto1' | translate }}
       </h2>
       <h3 class="text-xs mb-10 md:text-xl font-secundary text-gray-400 max-w-xl">
-        Tomamos uma decisão simples — mas que mudou tudo.
+        {{ 'ap-texto2' | translate }}
       </h3>
     </div>
   </div>

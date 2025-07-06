@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contador',
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './contador.html',
   styleUrl: './contador.scss',
 })

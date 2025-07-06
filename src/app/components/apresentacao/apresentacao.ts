@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-apresentacao',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './apresentacao.html',
   styleUrl: './apresentacao.scss',
 })

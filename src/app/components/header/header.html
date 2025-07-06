@@ -1,13 +1,10 @@
-<div class="bg-blue-100 w-screen ">
-  <brn-select class="inline-block" placeholder="Select an option">
-    <hlm-select-trigger>
-        <hlm-select-value />
-    </hlm-select-trigger>
-    <hlm-select-content class="w-56">
-            <hlm-option value="Refresh">Refresh</hlm-option>
-            <hlm-option value="Settings">Settings</hlm-option>
-            <hlm-option value="Help">Help</hlm-option>
-            <hlm-option value="Signout">Sign out</hlm-option>
-    </hlm-select-content>
+<brn-select (valueChange)="trocarIdioma($event)">
+  <hlm-select-trigger>
+    <hlm-select-value />
+  </hlm-select-trigger>
+  <hlm-select-content class="w-56">
+    <hlm-option value="pt">Português</hlm-option>
+    <hlm-option value="en">English</hlm-option>
+    <hlm-option value="es">Espanhol</hlm-option>
+  </hlm-select-content>
 </brn-select>
-</div>
