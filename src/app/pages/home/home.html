@@ -1,2 +1,26 @@
-<app-contador></app-contador>
-<app-galeria>
+
+<!-- HEADER -->
+<div class=" absolute z-2 ">
+    <app-header></app-header>
+
+</div>
+
+<!-- SEÇÃO 1 -->
+<div class="relative w-full overflow-hidden">
+    <div class="relative h-[90vh] md:h-[90vh]">
+      <img
+        src="assets/bg.jpg"
+        class="absolute top-0 left-0 w-full h-full object-cover blur-sm brightness-75 scale-110"
+      />
+  
+      <div class="relative z-1 flex items-center justify-center h-full text-center text-white">
+        <app-contador></app-contador>
+      </div>
+    </div>
+  </div>
+  
+  <!-- SEÇÃO 2  -->
+  <div class="h-[30vh] md:h-[40vh] w-full overflow-hidden">
+    <app-apresentacao></app-apresentacao>
+  </div>
+  
