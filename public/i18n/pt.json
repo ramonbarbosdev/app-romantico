@@ -1,7 +1,11 @@
 {
   
   "cont-primario": "Estamos juntos há",
-  "cont-secundario": "dias",
+  "cont-dias": "Dias",
+  "cont-horas": "Horas",
+  "cont-minutos": "Minutos",
+  "cont-segundos": "Segundos",
+
   "ap-titulo": "Olá, meu bem!",
   "ap-texto1": "No dia 30 de janeiro de 2025, em Salvador, Bahia.",
   "ap-texto2": "Tomamos uma decisão simples — mas que mudou tudo."

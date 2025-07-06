@@ -1,9 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
-
+@import './styles/variaveis';
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap');
+@import '@spartan-ng/brain/hlm-tailwind-preset.css';
+@import '@angular/cdk/overlay-prebuilt.css';
+
 .font-primary {
     font-family: "Lobster", sans-serif;
     font-weight: 400;
@@ -17,18 +20,9 @@
     font-style: normal;
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0; }
 
-@import '@spartan-ng/brain/hlm-tailwind-preset.css';
-@import '@angular/cdk/overlay-prebuilt.css';
+
+
 :root {
     // --font-sans: '';
     --background: 0 0% 100%;
@@ -51,6 +45,7 @@
     --input: 240 5.9% 90%;
     --ring: 240 5.9% 10%;
     --radius: 0.5rem;
+    --bg-primary: #C8447E;
     color-scheme: light;
 }
 

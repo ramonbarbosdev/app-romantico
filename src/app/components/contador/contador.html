@@ -1,4 +1,28 @@
-<div class="text-center my-6">
-    <h2 class="text-4xl font-bold">{{ 'cont-primario' | translate }}</h2>
-    <p class="text-6xl text-pink-500 mt-4">{{ diasJuntos }} {{ 'cont-secundario' | translate }} 💕</p>
+<div class="text-center my-6 ">
+  <h2 class="text-4xl font-bold mb-5">{{ 'cont-primario' | translate }}</h2>
+
+
+  <div class="flex  w-full justify-between gap-2 ">
+
+    <div class="bg-(--bg-primary) font-secundary w-20 h-20 rounded-full flex flex-col justify-center items-center " >
+      <p>{{ dias }}</p>
+      <p>{{ 'cont-dias' | translate }}</p>
+    </div>
+
+    <div class="bg-(--bg-primary) font-secundary w-20 h-20 rounded-full flex flex-col justify-center items-center " >
+      <p>{{ horas }}</p>
+      <p>{{ 'cont-horas' | translate }}</p>
+    </div>
+
+    <div class="bg-(--bg-primary) font-secundary w-20 h-20 rounded-full flex flex-col justify-center items-center " >
+      <p>{{ minutos }}</p>
+      <p>{{ 'cont-minutos' | translate }}</p>
+    </div>
+
+    <div class="bg-(--bg-primary) font-secundary w-20 h-20 rounded-full flex flex-col justify-center items-center " >
+      <p>{{ segundos }}</p>
+      <p>{{ 'cont-segundos' | translate }}</p>
+    </div>
+
   </div>
+</div>

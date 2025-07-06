@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -7,13 +7,37 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './contador.html',
   styleUrl: './contador.scss',
 })
-export class Contador {
-  diasJuntos = 0;
-  dataInicio = new Date('2023-01-01'); // <== coloque aqui a data de início
+export class Contador implements OnInit, OnDestroy {
+  dias: number = 0;
+  horas: number = 0;
+  minutos: number = 0;
+  segundos: number = 0;
 
-  ngOnInit() {
-    const hoje = new Date();
-    const diffTime = Math.abs(hoje.getTime() - this.dataInicio.getTime());
-    this.diasJuntos = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  private intervalo: any;
+
+  // 🩷 Data de início do relacionamento
+  private dataInicio = new Date('2024-10-01T00:00:00');
+
+  ngOnInit(): void {
+    this.atualizarContador();
+    this.intervalo = setInterval(() => {
+      this.atualizarContador();
+    }, 1000);
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.intervalo);
+  }
+
+  private atualizarContador(): void {
+    const agora = new Date();
+    const diferencaMs = agora.getTime() - this.dataInicio.getTime();
+
+    const totalSegundos = Math.floor(diferencaMs / 1000);
+
+    this.dias = Math.floor(totalSegundos / (60 * 60 * 24));
+    this.horas = Math.floor((totalSegundos % (60 * 60 * 24)) / (60 * 60));
+    this.minutos = Math.floor((totalSegundos % (60 * 60)) / 60);
+    this.segundos = totalSegundos % 60;
   }
 }
